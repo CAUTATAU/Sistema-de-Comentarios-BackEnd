@@ -40,6 +40,10 @@ public class CommentService {
         throw new RuntimeException("Comentário não encontrado.");
     }
 
+    public void deleteComment(Integer id) {
+        commentRepository.deleteById(id);
+    }
+
 
 
 }

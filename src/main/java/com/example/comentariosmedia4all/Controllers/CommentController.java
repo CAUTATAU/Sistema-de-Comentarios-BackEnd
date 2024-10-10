@@ -34,4 +34,10 @@ public class CommentController {
         commentService.updateComment(id, newText);
         return ResponseEntity.ok("Comentario alterado com sucesso");
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteComment(@PathVariable Integer id) {
+        commentService.deleteComment(id);
+        return ResponseEntity.noContent().build();
+    }
 }
